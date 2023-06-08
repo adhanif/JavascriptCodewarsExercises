@@ -297,4 +297,139 @@
 // }
 // console.log(reverseWords("double  spaced  words"));
 
-// Question 22 :
+// Question 22 : In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+
+// Examples
+// makeNegative(1);    // return -1
+// makeNegative(-5);   // return -5
+// makeNegative(0);    // return 0
+// makeNegative(0.12); // return -0.12
+
+// function makeNegative(num) {
+//   return num < 0? num : -num;
+// }
+
+// console.log(makeNegative(-9));
+
+// Question 23 :Examples:
+// accum("abcd") -> "A-Bb-Ccc-Dddd"
+// accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+// accum("cwAt") -> "C-Ww-Aaa-Tttt"
+// The parameter of accum is a string which includes only letters from a..z and A..Z.
+
+// function accum(s) {
+//   return s
+//     .split("")
+//     .map((currentValue, index) => {
+//       currentValue = currentValue.toUpperCase();
+//       for (let i = 0; i < index; i++) {
+//         currentValue += currentValue[0].toLowerCase();
+//       }
+//       return currentValue;
+//     })
+//     .join("-");
+// }
+
+// function accum(s) {
+//   return s
+//     .split("")
+//     .map((c, i) => c.toUpperCase() + c.toLowerCase().repeat(i))
+//     .join("-");
+// }
+// console.log(accum("abcd"));
+
+// Question 24 :Examples:Given an array (arr) as an argument complete the function countSmileys that should return the total number of smiling faces.
+// Rules for a smiling face:
+// Each smiley face must contain a valid pair of eyes. Eyes can be marked as : or ;
+// A smiley face can have a nose but it does not have to. Valid characters for a nose are - or ~
+// Every smiling face must have a smiling mouth that should be marked with either ) or D
+// No additional characters are allowed except for those mentioned.
+
+// Valid smiley face examples: :) :D ;-D :~)
+// Invalid smiley faces: ;( :> :} :]
+// Example
+// countSmileys([':)', ';(', ';}', ':-D']);       // should return 2;
+// countSmileys([';D', ':-(', ':-)', ';~)']);     // should return 3;
+// countSmileys([';]', ':[', ';*', ':$', ';-D']); // should return 1;
+
+// function countSmileys(arr) {
+//   let face = 0;
+//   arr.forEach((ele) => {
+//     if (
+//       ele === ":)" ||
+//       ele === ":D" ||
+//       ele === ";)" ||
+//       ele === ";D" ||
+//       ele === ";-D" ||
+//       ele === ":-D" ||
+//       ele === ":~D" ||
+//       ele === ";~D" ||
+//       ele === ":-)" ||
+//       ele === ";-)" ||
+//       ele === ":~)" ||
+//       ele === ";~)"
+//     ) {
+//       console.log("this");
+//       face++;
+//     }
+//     return face;
+//   });
+//   return face;
+// }
+
+// console.log(countSmileys([':D',':~)',';~D',':)']));
+
+// Question 25 :Write a function named setAlarm which receives two parameters. The first parameter, employed, is true whenever you are employed and the second parameter, vacation is true whenever you are on vacation.
+// The function should return true if you are employed and not on vacation (because these are the circumstances under which you need to set an alarm). It should return false otherwise. Examples:
+
+// setAlarm(true, true) -> false
+// setAlarm(false, true) -> false
+// setAlarm(false, false) -> false
+// setAlarm(true, false) -> true
+
+// function setAlarm(employed, vacation) {
+//   return employed && !vacation  ? true : false;
+// }
+
+// console.log(setAlarm(true, false));
+
+// Question 26 :Given a non-empty array of integers, return the result of multiplying the values together in order. Example:// [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+
+// function grow(x) {
+//   return x.reduce((total, cur) => {
+//     return total * cur;
+//   }, 1);
+// }
+// console.log(grow([1, 2, 3, 4]));
+
+// Question 26: There is an array with some numbers. All numbers are equal except for one. Try to find it!
+
+// findUniq([ 1, 1, 1, 2, 1, 1 ]) === 2
+// findUniq([ 0, 0, 0.55, 0, 0 ]) === 0.55
+// It’s guaranteed that array contains at least 3 numbers.
+
+// The tests contain some very huge arrays, so think about performance.
+
+// This is the first kata in series:
+
+// Find the unique number (this kata)
+// Find the unique string
+// Find The Unique
+
+// function findUniq(arr) {
+//   const countMap = {};
+//   arr.forEach((number) => {
+//     if (countMap[number]) {
+//       countMap[number]++;
+//     } else {
+//       countMap[number] = 1;
+//     }
+//   });
+//   const uniqueNumber = Object.keys(countMap)
+//     .filter((key) => countMap[key] === 1)
+//     .join("");
+
+//   return uniqueNumber ? Number(uniqueNumber) : undefined;
+// }
+
+// console.log(findUniq([1, 0, 0]));
