@@ -433,3 +433,155 @@
 // }
 
 // console.log(findUniq([1, 0, 0]));
+
+// Question 27: our task is to find the first element of an array that is not consecutive. By not consecutive we mean not exactly 1 larger than the previous element of the array. E.g. If we have an array [1,2,3,4,6,7,8] then 1 then 2 then 3 then 4 are all consecutive but 6 is not, so that's the first non-consecutive number. If the whole array is consecutive then return null2.
+
+//The array will always have at least 2 elements1 and all elements will be numbers. The numbers will also all be unique and in ascending order. The numbers could be positive or negative and the first non-consecutive could be either too!
+
+// function firstNonConsecutive(arr) {
+//   for (let i = 1; i <= arr.length; i++) {
+//     if (arr[i] !== arr[i - 1] + 1) {
+//       return arr[i];
+//     }
+//   }
+//   return null;
+// }
+
+// console.log(firstNonConsecutive([1, 2, 3, 4, 5, 6, 7, 8]));
+
+// Question 28: Given an array of integers your solution should find the smallest integer.
+
+// For example:
+
+// Given [34, 15, 88, 2] your solution will return 2
+// Given [34, -345, -1, 100] your solution will return -345
+// You can assume, for the purpose of this kata, that the supplied array will not be empty.
+
+// class SmallestIntegerFinder {
+//   findSmallestInt(args) {
+//     return Math.min(...args);
+//   }
+// }
+// const myObject = new SmallestIntegerFinder();
+// console.log(myObject.findSmallestInt([34, -345, -1, 100]));
+
+// Question 29: Given two arrays, a1 and a2, sort the elements of a2 based on the the index of the word in a1 that begins with the same letter.
+
+// Example 1
+// a1 = ['giraffe', 'orangutan', 'impala', 'elephant', 'rhino']
+// a2 = ['rattlesnake', 'eagle', 'geko', 'iguana', 'octopus']
+// Output ['geko', 'octopus', 'iguana', 'eagle', 'rattlesnake']
+
+// function sortArray(a1, a2) {
+//   const sorted = [];
+//   a1.forEach((_, index) => {
+//     for (let i = 0; i < a1.length; i++) {
+//       if (a2[i][0] === a1[index][0]) {
+//         sorted.push(a2[i]);
+//       }
+//     }
+//   });
+//   return sorted;
+
+// return a1.map((ele1)=>{
+//     return a2.filter((ele2)=>{
+//         return ele2[0] === ele1[0]})
+//     })
+// }
+// var a1 = ["jellyfish", "koi", "caribou", "owl", "dolphin"];
+// var a2 = ["ostrich", "jaguar", "deer", "camel", "kangaroo"];
+// console.log(sortArray(a1, a2));
+
+// Question 30:  Given a string of words, you need to find the highest scoring word.Each letter of a word scores points according to its position in the alphabet: a = 1, b = 2, c = 3 etc. For example, the score of abad is 8 (1 + 2 + 1 + 4). You need to return the highest scoring word as a string. If two words score the same, return the word that appears earliest in the original string. All letters will be lowercase and all inputs will be valid.
+
+// function high(x) {
+//   const highest = new Map();
+//   let maxValue = 0;
+//   let maxkey = null;
+//   x.split(" ").map((ele) => {
+//     const a = ele.split("").reduce((acc, curr) => {
+//       return acc + curr.charCodeAt() - 96;
+//     }, 0);
+//     return highest.set(ele, a);
+//   });
+//   for (const [key, value] of highest) {
+//     if (value > maxValue) {
+//       maxValue = value;
+//       maxkey = key;
+//     }
+//   }
+//   return maxkey;
+// }
+
+// console.log(high("what time are we climbing up the volcano"));
+
+// Question 31: Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+
+// Examples (Input -> Output):
+// * "String"      -> "SSttrriinngg"
+// * "Hello World" -> "HHeelllloo  WWoorrlldd"
+// * "1234!_ "     -> "11223344!!__  "
+
+// function doubleChar(str) {
+//   return str
+//     .split("")
+//     .map((ele) => {
+//       return (ele += ele);
+//     })
+//     .join("");
+// }
+
+// console.log(doubleChar("1234!_ "));
+
+// Question 32: You are given an odd-length array of integers, in which all of them are the same, except for one single number. Complete the method which accepts such an array, and returns that single different number. The input array will always be valid! (odd-length >= 3)
+
+// Examples
+// [1, 1, 2] ==> 2
+// [17, 17, 3, 17, 17, 17, 17] ==> 3
+
+// function stray(numbers) {
+//   let values = {};
+//   numbers.forEach((ele) => {
+//     if (values[ele]) {
+//       values[ele]++;
+//     } else {
+//       values[ele] = 1;
+//     }
+//   });
+//   console.log(values);
+//   for (const key in values) {
+//     if (values[key] === 1) {
+//       return Number(key);
+//     }
+//   }
+// }
+
+// console.log(stray([1, 2, 1]));
+
+// function stray(numbers) {
+//   console.log(numbers.indexOf(1));
+//   for (let num of numbers) {
+//     // console.log(numbers.indexOf(num));
+//     if (numbers.indexOf(num) === numbers.lastIndexOf(num)) {
+//       return num;
+//     }
+//   }
+// }
+
+// stray([1, 2, 1]);
+
+// Question 33:Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:
+
+// []                                -->  "no one likes this"
+// ["Peter"]                         -->  "Peter likes this"
+// ["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
+// ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
+// ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
+
+function likes(names) {
+  return names.map((name)=>{
+    return 
+  })
+}
+
+console.log(likes(["Jacob", "Alex"]))
