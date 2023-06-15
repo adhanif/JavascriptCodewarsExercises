@@ -614,3 +614,73 @@
 //   return a;
 // }
 // console.log(SeriesSum(5));
+
+// Question 35: You will be given an array of numbers. You have to sort the odd numbers in ascending order while leaving the even numbers at their original positions.
+
+// [7, 1]  =>  [1, 7]
+// [5, 8, 6, 3, 4]  =>  [3, 8, 6, 5, 4]
+// [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]  =>  [1, 8, 3, 6, 5, 4, 7, 2, 9, 0]
+
+// function sortArray(array) {
+//   const numberIndices = [];
+//   const numbersToKeep = [];
+
+//   array.forEach((number, index) => {
+//     if (number % 2 === 0) {
+//       numberIndices.push(index);
+//       numbersToKeep.push(number);
+//     }
+//   });
+
+//   // Remove the numbers from the array
+//   numbersToKeep.forEach((number) => {
+//     const index = array.indexOf(number);
+//     if (index !== -1) {
+//       array.splice(index, 1);
+//     }
+//   });
+
+//   // Sort the remaining elements of the array
+//   array.sort((a, b) => a - b);
+
+//   // Insert the numbers back into the array at
+//   numberIndices.forEach((index, i) => {
+//     array.splice(index, 0, numbersToKeep[i]);
+//   });
+//   return array;
+// }
+// console.log(sortArray([5, 1, 8, 6, 3, 4, 2]));
+
+// Question 36: Complete the solution so that the function will break up camel casing, using a space between words.
+
+// Example
+// "camelCasing"  =>  "camel Casing"
+// "identifier"   =>  "identifier"
+// ""             =>  ""
+
+// function solution(string) {
+  // if (string === "") {
+  //   return "";
+  // }
+  // const index1 = [];
+
+  // string.split("").filter((ele, index) => {
+  //   if (ele === ele.toUpperCase()) {
+  //     index1.push(index);
+  //   }
+  // });
+  // index1.forEach((ele, index) => {
+  //   const stringArray = string.split("");
+  //   stringArray.splice(ele + index, 0, " ");
+  //   string = stringArray.join("");
+  // });
+  // return string;
+  // console.log([...string]);
+  // return [...string]
+  //   .map((char) => {
+  //     return char === char.toUpperCase() ? ` ${char}` : char;
+  //   })
+    // .join("");
+// }
+
+// console.log(solution("camelCasingTestCasing"));
