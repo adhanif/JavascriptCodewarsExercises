@@ -659,28 +659,112 @@
 // ""             =>  ""
 
 // function solution(string) {
-  // if (string === "") {
-  //   return "";
-  // }
-  // const index1 = [];
+// if (string === "") {
+//   return "";
+// }
+// const index1 = [];
 
-  // string.split("").filter((ele, index) => {
-  //   if (ele === ele.toUpperCase()) {
-  //     index1.push(index);
-  //   }
-  // });
-  // index1.forEach((ele, index) => {
-  //   const stringArray = string.split("");
-  //   stringArray.splice(ele + index, 0, " ");
-  //   string = stringArray.join("");
-  // });
-  // return string;
-  // console.log([...string]);
-  // return [...string]
-  //   .map((char) => {
-  //     return char === char.toUpperCase() ? ` ${char}` : char;
-  //   })
-    // .join("");
+// string.split("").filter((ele, index) => {
+//   if (ele === ele.toUpperCase()) {
+//     index1.push(index);
+//   }
+// });
+// index1.forEach((ele, index) => {
+//   const stringArray = string.split("");
+//   stringArray.splice(ele + index, 0, " ");
+//   string = stringArray.join("");
+// });
+// return string;
+// console.log([...string]);
+// return [...string]
+//   .map((char) => {
+//     return char === char.toUpperCase() ? ` ${char}` : char;
+//   })
+// .join("");
 // }
 
 // console.log(solution("camelCasingTestCasing"));
+
+// Question 37: In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". Your function receives one side of the DNA (string, except for Haskell); you need to return the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).Example: (input --> output)
+// "ATTGC" --> "TAACG"
+// "GTAT" --> "CATA"
+
+// function DNAStrand(dna) {
+//   return [...dna]
+//     .map((char) => {
+//       return char === "A"
+//         ? "T"
+//         : char === "T"
+//         ? "A"
+//         : char === "C"
+//         ? "G"
+//         : char === "G"
+//         ? "C"
+//         : "";
+//     })
+//     .join("");
+// }
+// console.log(DNAStrand("ATTGC"));
+
+// Question 38: Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. If the two numbers are equal return a or b.
+
+// Note: a and b are not ordered!
+
+// Examples (a, b) --> output (explanation)
+// (1, 0) --> 1 (1 + 0 = 1)
+// (1, 2) --> 3 (1 + 2 = 3)
+// (0, 1) --> 1 (0 + 1 = 1)
+// (1, 1) --> 1 (1 since both are same)
+// (-1, 0) --> -1 (-1 + 0 = -1)
+// (-1, 2) --> 2 (-1 + 0 + 1 + 2 = 2)
+
+// function getSum(a, b) {
+//   const range = (start, stop, step) =>
+//     Array.from({ length: stop - start + 1 }, (_, i) => start + i);
+//   if (a === b) {
+//     return a;
+//   } else if (a > b) {
+//     return range(b, a, 1).reduce((total, curr) => {
+//       return (total += curr);
+//     }, 0);
+//   } else {
+//     return range(a, b, 1).reduce((total, curr) => {
+//       return (total += curr);
+//     }, 0);
+//   }
+// }
+
+// console.log(getSum(-1, 2));
+
+// const range2 = (start, end) => {
+//   return Array.from({ length: end - start + 1 }, (_, i) => start + i);
+// };
+
+// Question 39: Implement a function that accepts 3 integer values a, b, c. The function should return true if a triangle can be built with the sides of given length and false in any other case.(In this case, all triangles must have surface greater than 0 to be accepted).
+
+// function isTriangle(a, b, c) {
+//   if (a + b > c && a + c > b && b + c > a) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// console.log(isTriangle(7,2,2));
+
+// Question 40: You get an array of numbers, return the sum of all of the positives ones.
+
+// Example [1,-4,7,12] => 1 + 7 + 12 = 20
+// Note: if there is nothing to sum, the sum is default to 0.
+
+// function positiveSum(arr) {
+//   return arr.reduce((total, curr) => {
+//     if (curr < 0) {
+//       return total;
+//     } else {
+//       return (total += curr);
+//     }
+//   }, 0);
+// }
+
+// console.log(positiveSum([1, -4, 7, 12]));
