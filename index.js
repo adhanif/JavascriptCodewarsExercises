@@ -1,3 +1,4 @@
+// Question1:
 // sumArray = a => a ? a.sort((x, y) => x - y).slice(1, -1).reduce((s, e) => s + e, 0) : 0;
 
 // console.log(sumArray([1,1, 1, 11, 11, 2, 3]));,
@@ -33,6 +34,7 @@
 // };
 
 // console.log(countSheep(0));
+
 // Question3:
 // function squareDigits(num) {
 //   if (num) {
@@ -768,3 +770,102 @@
 // }
 
 // console.log(positiveSum([1, -4, 7, 12]));
+
+// Question 41: Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+
+// Examples input/output:
+// XO("ooxx") => true
+// XO("xooxx") => false
+// XO("ooxXm") => true
+// XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+// XO("zzoo") => false
+
+// function XO(str) {
+//   str = str.toLowerCase();
+//   let count = {};
+//   str.split("").forEach((char) => {
+//     if (count[char]) {
+//       count[char]++;
+//     } else {
+//       count[char] = 1;
+//     }
+//   });
+
+//   return !count.x && !count.o
+//     ? true
+//     : !count.x || !count.o
+//     ? false
+//     : count.x === count.o
+//     ? true
+//     : false;
+
+//   //   if (!count.x && !count.o) {
+//   //     return true;
+//   //   } else if (!count.x || !count.o) {
+//   //     return false;
+//   //   } else if (count.x === count.o) {
+//   //     return true;
+//   //   } else {
+//   //     return false;
+//   //   }
+// }
+
+// function XO(str) {
+//     let x = str.match(/x/gi);
+//     let o = str.match(/o/gi);
+//     return (x && x.length) === (o && o.length);
+//   }
+// console.log(XO("ooom"));
+
+// Question 42: Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling. You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.
+// For example:
+// time = 3 ----> litres = 1
+// time = 6.7---> litres = 3
+// time = 11.8--> litres = 5
+
+// function litres(time) {
+//   return Math.floor(time * 0.5);
+// }
+// console.log(litres(0.82));
+
+// Question 43: Given a list of integers, determine whether the sum of its elements is odd or even.Give your answer as a string matching "odd" or "even".If the input array is empty consider it as: [0] (array with a zero).
+// Examples:
+// Input: [0]
+// Output: "even"
+
+// Input: [0, 1, 4]
+// Output: "odd"
+
+// Input: [0, -1, -5]
+// Output: "even"
+
+// function oddOrEven(arr) {
+//   return arr.reduce((total, curr) => {
+//     return total + curr;
+//   }, 0) % 2
+//     ? "odd"
+//     : "even";
+// }
+
+// console.log(oddOrEven([]));
+
+// Question 44: You are given the length and width of a 4-sided polygon. The polygon can either be a rectangle or a square. If it is a square, return its area. If it is a rectangle, return its perimeter. Example(Input1, Input2 --> Output):
+
+// 6, 10 --> 32
+// 3, 3 --> 9
+// Note: for the purposes of this kata you will assume that it is a square if its length and width are equal, otherwise it is a rectangle.
+
+// const areaOrPerimeter = function (l, w) {
+//   return l === w ? l * w : l !== w ? (l + w) * 2 : 0;
+// };
+
+// console.log(areaOrPerimeter(6, 10));
+
+// Question 45: A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant). Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
+
+function isPangram(string) {
+  const a = string.search(/[A-Z]/);
+  console.log(a);
+}
+
+console.log(isPangram("The quick brown fox jumps over the lazy dog."));
