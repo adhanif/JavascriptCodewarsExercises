@@ -861,11 +861,73 @@
 
 // console.log(areaOrPerimeter(6, 10));
 
-// Question 45: A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant). Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
+// Question 45: Some numbers have funny properties. For example:
 
-function isPangram(string) {
-  const a = string.search(/[A-Z]/);
-  console.log(a);
-}
+// 89 --> 8¹ + 9² = 89 * 1
+// 695 --> 6² + 9³ + 5⁴= 1390 = 695 * 2
+// 46288 --> 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688 = 46288 * 51
 
-console.log(isPangram("The quick brown fox jumps over the lazy dog."));
+// Given a positive integer n written as abcd... (a, b, c, d... being digits) and a positive integer p we want to find a positive integer k, if it exists, such that the sum of the digits of n taken to the successive powers of p is equal to k * n.
+// In other words:
+// Is there an integer k such as : (a ^ p + b ^ (p+1) + c ^(p+2) + d ^ (p+3) + ...) = n * k
+// If it is the case we will return k, if not return -1.
+// Note: n and p will always be given as strictly positive integers.
+
+// const pokemons = [
+//   {
+//     id: 1,
+//     name: "Bulbasaur",
+//     type: ["Grass", "Poison"],
+//     base: {
+//       HP: 45,
+//       Attack: 49,
+//       Defense: 49,
+//       Speed: 45,
+//       "Sp. Attack": 65,
+//       "Sp. Defense": 65,
+//     },
+//   },
+//   {
+//     id: 2,
+//     name: "Charmander",
+//     type: ["Fire"],
+//     base: {
+//       HP: 39,
+//       Attack: 52,
+//       Defense: 43,
+//       Speed: 65,
+//       "Sp. Attack": 60,
+//       "Sp. Defense": 50,
+//     },
+//   },
+//   {
+//     id: 3,
+//     name: "Squirtle",
+//     type: ["Water"],
+//     base: {
+//       HP: 44,
+//       Attack: 48,
+//       Defense: 65,
+//       Speed: 43,
+//       "Sp. Attack": 50,
+//       "Sp. Defense": 64,
+//     },
+//   },
+// ];
+
+// console.log(pokemons.name);
+
+// Q#46 We need a function that can transform a number (integer) into a string.
+
+// What ways of achieving this do you know?
+
+// Examples (input --> output):
+// 123  --> "123"
+// 999  --> "999"
+// -100 --> "-100"
+
+// function numberToString(num) {
+//   return num.toString();
+// }
+
+// console.log(numberToString(25));
