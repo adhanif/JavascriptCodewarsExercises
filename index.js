@@ -1010,13 +1010,44 @@
 
 // Question #51 Terminal game move function
 // In this game, the hero moves from left to right. The player rolls the dice and moves the number of spaces indicated by the dice two times.
-
 // Create a function for the terminal game that takes the current position of the hero and the roll (1-6) and return the new position.
-
 // Example:
-// move(3, 6) should equal 15
+// move(3,6) should equal 15
 
 // const move = (position, roll) => {
 //   return roll * 2 + position;
 // };
 // console.log(move(2, 5));
+
+// Question #52 Count the number of Duplicates
+// Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
+
+// Example
+// "abcde" -> 0 # no characters repeats more than once
+// "aabbcde" -> 2 # 'a' and 'b'
+// "aabBcde" -> 2 # 'a' occurs twice and 'b' twice (`b` and `B`)
+// "indivisibility" -> 1 # 'i' occurs six times
+// "Indivisibilities" -> 2 # 'i' occurs seven times and 's' occurs twice
+// "aA11" -> 2 # 'a' and '1'
+// "ABBA" -> 2 # 'A' and 'B' each occur twice
+
+// const duplicateCount = (text) => {
+//   text = text.toLowerCase();
+//   let duplicates = {};
+//   text.split("").forEach((ele) => {
+//     if (duplicates[ele]) {
+//       duplicates[ele]++;
+//     } else {
+//       duplicates[ele] = 1;
+//     }
+//   });
+//   let count = 0;
+//   for (key in duplicates) {
+//     if (duplicates[key] > 1) {
+//       count++;
+//     }
+//   }
+//   return count;
+// };
+
+// console.log(duplicateCount(""));
