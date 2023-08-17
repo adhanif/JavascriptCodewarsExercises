@@ -1064,15 +1064,28 @@
 // console.log(cockroachSpeed(1.08));
 
 // Question #54 In this simple exercise, you will create a program that will take two lists of integers, a and b. Each list will consist of 3 positive integers above 0, representing the dimensions of cuboids a and b. You must find the difference of the cuboids' volumes regardless of which is bigger.
-
 // For example, if the parameters passed are ([2, 2, 3], [5, 4, 1]), the volume of a is 12 and the volume of b is 20. Therefore, the function should return 8.
-
 // Your function will be tested with pre-made examples as well as random ones.
 
-const findDifference = (a, b) => {
- return Math.abs(
-    a.reduce((acc, curr) => acc * curr, 1) -
-      b.reduce((acc, curr) => acc * curr, 1)
-  );
-};
-console.log(findDifference([2, 2, 3], [5, 4, 1]));
+// const findDifference = (a, b) => {
+//  return Math.abs(
+//     a.reduce((acc, curr) => acc * curr, 1) -
+//       b.reduce((acc, curr) => acc * curr, 1)
+//   );
+// };
+// console.log(findDifference([2, 2, 3], [5, 4, 1]));
+
+// Question #55  Create a function that takes 2 integers in form of a string as an input, and outputs the sum (also as a string):
+
+// Example: (Input1, Input2 -->Output)
+
+// "4",  "5" --> "9"
+// "34", "5" --> "39"
+// "", "" --> "0"
+// "2", "" --> "2"
+// "-5", "3" --> "-2"
+
+// function sumStr(a, b) {
+//   return (Number(a) + Number(b)).toString();
+// }
+// console.log(sumStr("4", "5"));
