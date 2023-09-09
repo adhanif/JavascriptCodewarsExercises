@@ -1394,7 +1394,6 @@
 
 //  Question #62 Write a function named first_non_repeating_letter that takes a string input, and returns the first character that is not repeated anywhere in the string. For example, if given the input 'stress', the function should return 't', since the letter t only occurs once in the string, and occurs first in the string. As an added challenge, upper- and lowercase letters are considered the same character, but the function should return the correct case for the initial letter. For example, the input 'sTreSS' should return 'T'. If a string contains all repeating characters, it should return an empty string ("") or None -- see sample tests.
 
-
 // function firstNonRepeatingLetter(str) {
 
 //   const lowerStr = str.toLowerCase();
@@ -1410,3 +1409,21 @@
 // }
 
 // console.log(firstNonRepeatingLetter("ssTtrreeSS"));
+/* 
+ Question #63  Define a function that takes in two non-negative integers a and b and returns the last decimal digit of a^b. Note that a and b are very large 
+
+ For example, the last decimal digit of 9^7 is 9, since 9^7=4782696,You may assume that the input will always be valid. Also, please take 0^0 to be 1 */
+
+// const lastDigit = function (str1, str2) {
+//   const numberAsString = Math.pow(str1, str2).toString();
+//   console.log(numberAsString);
+//   const lastDigit = parseInt(
+//     numberAsString.charAt(numberAsString.length - 1),
+//     10
+//   );
+
+//   return lastDigit;
+// };
+
+// console.log(lastDigit(10, 10000000000));
+
