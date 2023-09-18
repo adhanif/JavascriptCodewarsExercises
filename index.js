@@ -1470,3 +1470,18 @@
 // };
 
 // console.log(name1(["Ryan", "Kieran", "Mark"]));
+
+// Question #67 The main idea is to count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}. What if the string is empty? Then the result should be empty object literal, {}.
+
+// const count = (str) => {
+//   if (str === "") {
+//     return {};
+//   }
+//   let occur = {};
+//   str.split("").forEach((ele) => {
+//     !occur[ele] ? (occur[ele] = 1) : occur[ele]++;
+//   });
+//   return occur;
+// };
+
+// console.log(count("abcabc"));
