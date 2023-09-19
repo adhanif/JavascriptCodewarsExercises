@@ -1501,3 +1501,26 @@
 // };
 
 // console.log(number(["a", "b", "c"]));
+
+// Question #69  Converting a 12-hour time like "8:30 am" or "8:30 pm" to 24-hour time (like "0830" or "2030") sounds easy enough, right? Well, let's see if you can do it! On 12-hours clock, there is no 0 hour, and time just after midnight is denoted as, for example, 12:15 am. On 24-hour clock, this translates to 0015.
+
+// const to24hourtime = (hour, minute, period) => {
+//   const formatHour = hour.toString().padStart(2, "0");
+//   const formatMinute = minute.toString().padStart(2, "0");
+
+//   if (period === "pm") {
+//     if (hour >= 12) {
+//       return hour + `${formatMinute}`;
+//     } else if (hour < 12) {
+//       return `${hour + 12}` + `${formatMinute}`;
+//     }
+//   } else if (period === "am") {
+//     if (hour >= 12) {
+//       return `${hour - 12}`.toString().padStart(2, "0") + `${formatMinute}`;
+//     } else if (hour < 12) {
+//       return `${hour}`.toString().padStart(2, "0") + `${formatMinute}`;
+//     }
+//   }
+// };
+
+// console.log(to24hourtime(1, 0, "am"));
