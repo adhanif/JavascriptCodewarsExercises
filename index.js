@@ -1571,3 +1571,22 @@
 // }
 
 // console.log(gimme([5, 10, 14]));
+
+// Question #72 Simple, given a string of words, return the length of the shortest word(s). String will never be empty and you do not need to account for different data types.
+
+// function findShort(s) {
+//   let smallest = 0;
+//   s.split(" ").find((ele) => {
+//     if (smallest === 0) {
+//       smallest = ele.length;
+//     } else {
+//       if (ele.length < smallest) {
+//         smallest = ele.length;
+//       }
+//     }
+//   });
+//   return smallest;
+//   // console.log(Math.min(...s.split(" ").map((s) => s.length)));
+// }
+
+// findShort("Let's travel abroad shall we");
