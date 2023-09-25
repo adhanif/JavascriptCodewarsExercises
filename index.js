@@ -1622,3 +1622,16 @@
 
 // // const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
 // console.log(findOdd([0]));
+
+// Question #74 Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+
+// function removeExclamationMarks(s) {
+//   return s
+//     .split("")
+//     .map((ele) => {
+//       return ele != "!" ? ele : "";
+//     })
+//     .join("");
+// }
+
+// console.log(removeExclamationMarks("Hello World!"));
