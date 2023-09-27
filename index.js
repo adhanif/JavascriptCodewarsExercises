@@ -1698,3 +1698,25 @@
 //   return a.every((ele) => ele <= limit);
 // }
 // console.log(smallEnough([80, 117, 115, 104, 45, 85, 112, 115], 120));
+
+// Question #79 if the string contains equal number of uppercase and lowercase letters, convert the string to lowercase.
+// For example:
+
+// solve("coDe") = "code". Lowercase characters > uppercase. Change only the "D" to lowercase.
+// solve("CODe") = "CODE". Uppercase characters > lowecase. Change only the "e" to uppercase.
+// solve("coDE") = "code". Upper == lowercase. Change all to lowercase.
+
+// function solve(s) {
+//   let lower = 0;
+//   let Upper = 0;
+//   s.split("").forEach((ele) => {
+//     ele === ele.toLowerCase() ? lower++ : Upper++;
+//   });
+
+//   return Upper <= lower
+//     ? s.toLowerCase()
+//     : Upper > lower
+//     ? s.toUpperCase()
+//     : null;
+// }
+// console.log(solve("CODe"));
