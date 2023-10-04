@@ -1960,3 +1960,19 @@
 //     .toString();
 // }
 // highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4");
+
+// Question #92:Given a two-dimensional array of integers, return the flattened version of the array with all the integers in the sorted (ascending) order. Example:
+// Given [[3, 2, 1], [4, 6, 5], [], [9, 7, 8]], your function should return [1, 2, 3, 4, 5, 6, 7, 8, 9].
+
+// function flattenAndSort(array) {
+//   let arr = [];
+//   array.forEach((ele) => {
+//     ele.forEach((ele2) => {
+//       if (ele2 !== "") {
+//         arr.push(ele2);
+//       }
+//     });
+//   });
+//   return arr.sort((a, b) => a - b);
+// }
+// console.log(flattenAndSort([[3, 2, 1], [4, 6, 5], [], [9, 7, 8]]));
