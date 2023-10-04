@@ -1961,7 +1961,7 @@
 // }
 // highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4");
 
-// Question #92:Given a two-dimensional array of integers, return the flattened version of the array with all the integers in the sorted (ascending) order. Example:
+// Question #92: Given a two-dimensional array of integers, return the flattened version of the array with all the integers in the sorted (ascending) order. Example:
 // Given [[3, 2, 1], [4, 6, 5], [], [9, 7, 8]], your function should return [1, 2, 3, 4, 5, 6, 7, 8, 9].
 
 // function flattenAndSort(array) {
@@ -1976,3 +1976,26 @@
 //   return arr.sort((a, b) => a - b);
 // }
 // console.log(flattenAndSort([[3, 2, 1], [4, 6, 5], [], [9, 7, 8]]));
+
+// Question #93:  Task In this simple Kata your task is to create a function that turns a string into a Mexican Wave. You will be passed a string and you must return that string in an array where an uppercase letter is a person standing up.
+// Rules
+//  1.  The input string will always be lower case but maybe empty.
+//  2.  If the character in the string is whitespace then pass over it as if it was an empty seat
+// Example
+// wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
+
+// function wave(str) {
+//   let arr = [];
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] !== " ") {
+//       arr.push(
+//         str
+//           .split("")
+//           .map((char, j) => (i === j ? char.toUpperCase() : char))
+//           .join("")
+//       );
+//     }
+//   }
+//   return arr;
+// }
+// console.log(wave("two words"));
