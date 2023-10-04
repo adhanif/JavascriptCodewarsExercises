@@ -1923,3 +1923,15 @@
 //   }
 // }
 // console.log(incrementString("fo99obar99"));
+
+// Question #90: Complete the function which converts a binary number (given as a string) to a decimal number.
+
+// function binToDec(bin) {
+//   return bin
+//     .split("")
+//     .map((ele) => Number(ele))
+//     .reduce((acc, curr, i) => {
+//       return (acc += Math.pow(2, bin.length - i - 1) * curr);
+//     }, 0);
+// }
+// console.log(binToDec("1001001"));
