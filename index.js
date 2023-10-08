@@ -1999,3 +1999,10 @@
 //   return arr;
 // }
 // console.log(wave("two words"));
+
+// Question #94: Complete the function/method so that it returns the url with anything after the anchor (#) removed.
+// function removeUrlAnchor(url) {
+//   console.log(url.split("#")[0]);
+//   return url.split("#");
+// }
+// console.log(removeUrlAnchor("www.codewars.com#about"));
