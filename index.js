@@ -147,8 +147,8 @@
 
 // const binaryArrayToNumber = (arr) => {
 //   let decimal = 0;
-//   arr.forEach((num, index) => {
-//     decimal += num * Math.pow(2, arr.length - 1 - index);
+//   arr.forEach((num, i) => {
+//     decimal += num * Math.pow(2, arr.length - 1 - i);
 //   });
 //   return decimal;
 // };
@@ -322,9 +322,9 @@
 // function accum(s) {
 //   return s
 //     .split("")
-//     .map((currentValue, index) => {
+//     .map((currentValue, i) => {
 //       currentValue = currentValue.toUpperCase();
-//       for (let i = 0; i < index; i++) {
+//       for (let i = 0; i < i; i++) {
 //         currentValue += currentValue[0].toLowerCase();
 //       }
 //       return currentValue;
@@ -467,7 +467,7 @@
 // const myObject = new SmallestIntegerFinder();
 // console.log(myObject.findSmallestInt([34, -345, -1, 100]));
 
-// Question 29: Given two arrays, a1 and a2, sort the elements of a2 based on the the index of the word in a1 that begins with the same letter.
+// Question 29: Given two arrays, a1 and a2, sort the elements of a2 based on the the i of the word in a1 that begins with the same letter.
 
 // Example 1
 // a1 = ['giraffe', 'orangutan', 'impala', 'elephant', 'rhino']
@@ -476,9 +476,9 @@
 
 // function sortArray(a1, a2) {
 //   const sorted = [];
-//   a1.forEach((_, index) => {
+//   a1.forEach((_, i) => {
 //     for (let i = 0; i < a1.length; i++) {
-//       if (a2[i][0] === a1[index][0]) {
+//       if (a2[i][0] === a1[i][0]) {
 //         sorted.push(a2[i]);
 //       }
 //     }
@@ -561,10 +561,10 @@
 // console.log(stray([1, 2, 1]));
 
 // function stray(numbers) {
-//   console.log(numbers.indexOf(1));
+//   console.log(numbers.iOf(1));
 //   for (let num of numbers) {
-//     // console.log(numbers.indexOf(num));
-//     if (numbers.indexOf(num) === numbers.lastIndexOf(num)) {
+//     // console.log(numbers.iOf(num));
+//     if (numbers.iOf(num) === numbers.lastIOf(num)) {
 //       return num;
 //     }
 //   }
@@ -627,18 +627,18 @@
 //   const numberIndices = [];
 //   const numbersToKeep = [];
 
-//   array.forEach((number, index) => {
+//   array.forEach((number, i) => {
 //     if (number % 2 === 0) {
-//       numberIndices.push(index);
+//       numberIndices.push(i);
 //       numbersToKeep.push(number);
 //     }
 //   });
 
 //   // Remove the numbers from the array
 //   numbersToKeep.forEach((number) => {
-//     const index = array.indexOf(number);
-//     if (index !== -1) {
-//       array.splice(index, 1);
+//     const i = array.iOf(number);
+//     if (i !== -1) {
+//       array.splice(i, 1);
 //     }
 //   });
 
@@ -646,8 +646,8 @@
 //   array.sort((a, b) => a - b);
 
 //   // Insert the numbers back into the array at
-//   numberIndices.forEach((index, i) => {
-//     array.splice(index, 0, numbersToKeep[i]);
+//   numberIndices.forEach((i, i) => {
+//     array.splice(i, 0, numbersToKeep[i]);
 //   });
 //   return array;
 // }
@@ -664,16 +664,16 @@
 // if (string === "") {
 //   return "";
 // }
-// const index1 = [];
+// const i1 = [];
 
-// string.split("").filter((ele, index) => {
+// string.split("").filter((ele, i) => {
 //   if (ele === ele.toUpperCase()) {
-//     index1.push(index);
+//     i1.push(i);
 //   }
 // });
-// index1.forEach((ele, index) => {
+// i1.forEach((ele, i) => {
 //   const stringArray = string.split("");
-//   stringArray.splice(ele + index, 0, " ");
+//   stringArray.splice(ele + i, 0, " ");
 //   string = stringArray.join("");
 // });
 // return string;
@@ -1550,24 +1550,24 @@
 
 // console.log(rot13("Codewars"));
 
-// Question #71 As a part of this Kata, you need to create a function that when provided with a triplet, returns the index of the numerical element that lies between the other two elements. The input to the function will be an array of three distinct numbers (Haskell: a tuple).
+// Question #71 As a part of this Kata, you need to create a function that when provided with a triplet, returns the i of the numerical element that lies between the other two elements. The input to the function will be an array of three distinct numbers (Haskell: a tuple).
 
 // For example:
 // gimme([2, 3, 1]) => 0
-// 2 is the number that fits between 1 and 3 and the index of 2 in the input array is 0.
+// 2 is the number that fits between 1 and 3 and the i of 2 in the input array is 0.
 
 // Another example (just to make sure it is clear):
 // gimme([5, 10, 14]) => 1
-// 10 is the number that fits between 5 and 14 and the index of 10 in the input array is 1.
+// 10 is the number that fits between 5 and 14 and the i of 10 in the input array is 1.
 
 // function gimme(triplet) {
-//   let index = 0;
+//   let i = 0;
 //   triplet.filter((ele, i) => {
 //     if (ele !== Math.max(...triplet) && ele !== Math.min(...triplet)) {
-//       index = i;
+//       i = i;
 //     }
 //   });
-//   return index;
+//   return i;
 // }
 
 // console.log(gimme([5, 10, 14]));
@@ -1822,20 +1822,20 @@
 
 // console.log(roundToNext5(21));
 
-// Question #86 You are going to be given an array of integers. Your job is to take that array and find an index N where the sum of the integers to the left of N is equal to the sum of the integers to the right of N. If there is no index that would make this happen, return -1. For example: Let's say you are given the array {1,2,3,4,3,2,1}: Your function will return the index 3, because at the 3rd position of the array, the sum of left side of the index ({1,2,3}) and the sum of the right side of the index ({3,2,1}) both equal 6.
+// Question #86 You are going to be given an array of integers. Your job is to take that array and find an i N where the sum of the integers to the left of N is equal to the sum of the integers to the right of N. If there is no i that would make this happen, return -1. For example: Let's say you are given the array {1,2,3,4,3,2,1}: Your function will return the i 3, because at the 3rd position of the array, the sum of left side of the i ({1,2,3}) and the sum of the right side of the i ({3,2,1}) both equal 6.
 
 // Let's look at another one.
 // You are given the array {1,100,50,-51,1,1}:
-// Your function will return the index 1, because at the 1st position of the array, the sum of left side of the index ({1}) and the sum of the right side of the index ({50,-51,1,1}) both equal 1.
+// Your function will return the i 1, because at the 1st position of the array, the sum of left side of the i ({1}) and the sum of the right side of the i ({50,-51,1,1}) both equal 1.
 
 // Last one:
 // You are given the array {20,10,-80,10,10,15,35}
-// At index 0 the left side is {}
+// At i 0 the left side is {}
 // The right side is {10,-80,10,10,15,35}
 // They both are equal to 0 when added. (Empty arrays are equal to 0 in this problem)
-// Index 0 is the place where the left side and right side are equal.
+// I 0 is the place where the left side and right side are equal.
 
-// function findEvenIndex(arr) {
+// function findEvenI(arr) {
 //   for (let i = 0; i < arr.length; i++) {
 //     let leftSum = arr.slice(0, i).reduce((a, c) => a + c, 0);
 //     let rightSum = arr.slice(i + 1).reduce((a, c) => a + c, 0);
@@ -1846,7 +1846,7 @@
 //   }
 //   return -1;
 // }
-// console.log(findEvenIndex([20, 10, -80, 10, 10, 15, 35]));
+// console.log(findEvenI([20, 10, -80, 10, 10, 15, 35]));
 
 // Question #87 Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
 
@@ -2006,3 +2006,35 @@
 //   return url.split("#");
 // }
 // console.log(removeUrlAnchor("www.codewars.com#about"));
+
+// Question #95: Take an integer n (n >= 0) and a digit d (0 <= d <= 9) as an integer.Square all numbers k (0 <= k <= n) between 0 and n. Count the numbers of digits d used in the writing of all the k**2. Implement the function taking n and d as parameters and returning this count.
+
+// Examples:
+// n = 10, d = 1
+// the k*k are 0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100
+// We are using the digit 1 in: 1, 16, 81, 100. The total count is then 4.
+
+// The function, when given n = 25 and d = 1 as argument, should return 11 since
+// the k*k that contain the digit 1 are:
+// 1, 16, 81, 100, 121, 144, 169, 196, 361, 441.
+// So there are 11 digits 1 for the squares of numbers between 0 and 25.
+// Note that 121 has twice the digit 1.
+
+// function nbDig(n, d) {
+//   let arr = [];
+//   let count = 0;
+//   for (let i = 0; i <= n; i++) {
+//     arr.push(i ** 2);
+//   }
+//   arr.forEach((n) => {
+//     String(n)
+//       .split("")
+//       .forEach((m) => {
+//         if (`${m}`.includes(`${d}`)) {
+//           count++;
+//         }
+//       });
+//   });
+//   return count;
+// }
+// console.log(nbDig(10, 1));
