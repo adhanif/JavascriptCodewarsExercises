@@ -2071,5 +2071,30 @@
 // function solution(nums) {
 //   return !nums ? [] : nums.sort((a, b) => a - b);
 // }
-
 // console.log(solution([1, 2, 10, 50, 5]));
+
+// Question #98: Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.
+// For example:
+// uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
+// uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
+// uniqueInOrder([1,2,2,3,3])       == [1,2,3]
+
+// const uniqueInOrder = (arr) => {
+//   let curr = 0;
+//   if (typeof arr === "string") {
+//     return arr.split("").filter((ele) => {
+//       if (curr !== ele) {
+//         curr = ele;
+//         return ele;
+//       }
+//     });
+//   } else {
+//     return arr.filter((ele) => {
+//       if (curr !== ele) {
+//         curr = ele;
+//         return ele;
+//       }
+//     });
+//   }
+// };
+// console.log(uniqueInOrder("AAAABBBCCDAABBB"));
