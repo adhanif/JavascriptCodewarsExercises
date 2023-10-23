@@ -2112,3 +2112,29 @@
 //   return num;
 // }
 // console.log(factorial(0));
+
+// Question #100: In this kata you are required to, given a string, replace every letter with its position in the alphabet. If anything in the text isn't a letter, ignore it and don't return it.
+// "a" = 1, "b" = 2, etc.
+
+// Example
+// alphabetPosition("The sunset sets at twelve o' clock.")
+// Should return "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11" ( as a string )
+
+// const alphabetPosition = (text) => {
+//   text = text.toLowerCase();
+//   let myObject = {};
+//   for (let i = 0; i < 26; i++) {
+//     myObject[String.fromCharCode(97 + i)] = i + 1;
+//   }
+
+//   let arr = "";
+//   text.split("").filter((ele) => {
+//     if (ele.match(/[a-z]/i)) {
+//       // console.log(ele);
+//       arr += myObject[ele] + " ";
+//     }
+//   });
+//   console.log(typeof arr);
+//   return arr.trim();
+// };
+// console.log(alphabetPosition("The narwhal bacons at midnight."));
