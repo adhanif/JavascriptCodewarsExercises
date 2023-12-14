@@ -2138,3 +2138,33 @@
 //   return arr.trim();
 // };
 // console.log(alphabetPosition("The narwhal bacons at midnight."));
+
+// let o = {}; // o inherits object methods from Object.prototype
+// o.x = 1; // and it now has an own property x.
+// console.log(o);
+// let p = Object.create(o); // p inherits properties from o and Object.prototype
+// p.y = 2; // and has an own property y.
+// console.log(p);
+// let q = Object.create(p); // q inherits properties from p, o, and...
+// q.z = 3; // ...Object.prototype and has an own property z.
+// console.log(q);
+// console.log(q.x + q.y); // => 3; x and y are inherited from o and p
+
+// let unitcircle = { r: 1 }; // An object to inherit from
+// let c = Object.create(unitcircle); // c inherits the property r
+// c.x = 1;
+// c.y = 1; // c defines two properties of its own
+// c.r = 2; // c overrides its inherited property
+// console.log(c);
+// console.log(unitcircle); // => 1: the prototype is not affected
+
+// Question #101: Write a function that takes a list of at least four elements as an argument and returns a list of the middle two or three elements in reverse order.
+
+// const reverseMiddle = (arr) => {
+//   return arr.length % 2 === 0
+//     ? arr.slice(arr.length / 2 - 1, arr.length / 2 + 1).reverse()
+//     : arr
+//         .slice(Math.floor(arr.length / 2) - 1, Math.floor(arr.length / 2) + 2)
+//         .reverse();
+// };
+// console.log(reverseMiddle([1, 2, 3, 4, 5, 6, 7]));
