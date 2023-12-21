@@ -2171,7 +2171,16 @@
 
 // Question #102: Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result. It should remove all values from list a, which are present in list b keeping their order.
 
-const arrayDiff = (a, b) => {
-  return a.filter((ele) => !b.includes(ele));
-};
-console.log(arrayDiff([1, 2, 2, 2, 3], [2]));
+// const arrayDiff = (a, b) => {
+//   return a.filter((ele) => !b.includes(ele));
+// };
+// console.log(arrayDiff([1, 2, 2, 2, 3], [2]));
+
+// Question #103: ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits. If the function is passed a valid PIN string, return true, else return false.
+
+// const validatePIN = (pin) => {
+//   return (pin.length === 4 || pin.length === 6) && /^\d+$/.test(pin)
+//     ? true
+//     : false;
+// };
+// console.log(validatePIN("1234"));
