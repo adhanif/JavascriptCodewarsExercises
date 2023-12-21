@@ -2232,3 +2232,29 @@
 //   return Number.isInteger(Math.sqrt(n)) ? true : false;
 // };
 // console.log(isSquare(0));
+
+// Question #107: Given an array of positive integers (the weights of the people), return a new array/tuple of two integers, where the first one is the total weight of team 1, and the second one is the total weight of team 2.
+// Notes
+// Array size is at least 1.
+// rowWeights([13, 27, 49])  ==>  return (62, 27)
+
+// function rowWeights(array) {
+//   return [
+//     array.reduce((acc, curr, i) => {
+//       if (i % 2 === 0) {
+//         return acc + curr;
+//       } else {
+//         return acc;
+//       }
+//     }, 0),
+//     array.reduce((acc, curr, i) => {
+//       if (i % 2 !== 0) {
+//         return acc + curr;
+//       } else {
+//         return acc;
+//       }
+//     }, 0),
+//   ];
+// }
+
+// console.log(rowWeights([29, 83, 67, 53, 19, 28, 96]));
