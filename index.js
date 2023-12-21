@@ -2185,7 +2185,7 @@
 // };
 // console.log(validatePIN("1234"));
 
-// Question #104:Given a 2D ( nested ) list ( array, vector, .. ) of size m * n, your task is to find the sum of the minimum values in each row.
+// Question #104: Given a 2D ( nested ) list ( array, vector, .. ) of size m * n, your task is to find the sum of the minimum values in each row.
 // [ [ 1, 2, 3, 4, 5 ]        #  minimum value of row is 1
 // , [ 5, 6, 7, 8, 9 ]        #  minimum value of row is 5
 // , [ 20, 21, 34, 56, 100 ]  #  minimum value of row is 20
@@ -2204,3 +2204,17 @@
 //     [5, 8, 7, 4, 5],
 //   ])
 // );
+
+// Question #105: Write a function named sumDigits which takes a number as input and returns the sum of the absolute value of each of the number's decimal digits.
+// For example: (Input --> Output)
+// 10 --> 1
+// 99 --> 18
+// -32 --> 5
+
+// const sumDigits = (number) => {
+//   return Math.abs(number)
+//     .toString()
+//     .split("")
+//     .reduce((acc, curr) => acc + Number(curr), 0);
+// };
+// console.log(sumDigits(-99));
