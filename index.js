@@ -2168,3 +2168,10 @@
 //         .reverse();
 // };
 // console.log(reverseMiddle([1, 2, 3, 4, 5, 6, 7]));
+
+// Question #102: Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result. It should remove all values from list a, which are present in list b keeping their order.
+
+const arrayDiff = (a, b) => {
+  return a.filter((ele) => !b.includes(ele));
+};
+console.log(arrayDiff([1, 2, 2, 2, 3], [2]));
