@@ -2218,3 +2218,17 @@
 //     .reduce((acc, curr) => acc + Number(curr), 0);
 // };
 // console.log(sumDigits(-99));
+
+// Question #106: given an integral number, determine if it's a square number:
+// Examples
+// -1  =>  false
+//  0  =>  true
+//  3  =>  false
+//  4  =>  true
+// 25  =>  true
+// 26  =>  false
+
+// const isSquare = (n) => {
+//   return Number.isInteger(Math.sqrt(n)) ? true : false;
+// };
+// console.log(isSquare(0));
