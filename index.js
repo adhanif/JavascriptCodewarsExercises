@@ -2278,8 +2278,23 @@
 // Your function would return the following array:
 // ["Eyes", "Glasses", "Monocles", "Telescopes"]
 
-// Solution 
+// Solution
 // const sortByLength = (array) => {
 //   return array.sort((a, b) => a.length - b.length);
 // };
 // console.log(sortByLength(["Telescopes", "Glasses", "Eyes", "Monocles"]));
+
+// Question #110: Convert a hash into an array. Nothing more, Nothing less.
+// {name: 'Jeremy', age: 24, role: 'Software Engineer'}
+// should be converted into
+// [["age", 24], ["name", "Jeremy"], ["role", "Software Engineer"]]
+// Note: The output array should be sorted alphabetically by key name.
+
+// Solution
+// const convertHashToArray = (hash) => {
+//   return Object.entries(hash).sort();
+// };
+
+// console.log(
+//   convertHashToArray({ name: "Jeremy", age: 24, role: "Software Engineer" })
+// );
