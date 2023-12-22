@@ -2258,3 +2258,16 @@
 // }
 
 // console.log(rowWeights([29, 83, 67, 53, 19, 28, 96]));
+
+// Question #108: Complete the solution so that it takes the object (JavaScript/CoffeeScript) or hash (ruby) passed in and generates a human readable string from its key/value pairs. The format should be "KEY = VALUE". Each key/value pair should be separated by a comma except for the last pair. Example:
+// solution({a: 1, b: '2'}) // should return "a = 1,b = 2"
+
+// const solution = (pairs) => {
+//   let str = "";
+//   for (const key in pairs) {
+//     str += `${key} = ${pairs[key] },`;
+//   }
+//   str = str.slice(0, -1);
+//   return str;
+// };
+// console.log(solution({ a: 1, b: "2" }));
