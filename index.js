@@ -2271,3 +2271,15 @@
 //   return str;
 // };
 // console.log(solution({ a: 1, b: "2" }));
+
+// Question #109: Write a function that takes an array of strings as an argument and returns a sorted array containing the same strings, ordered from shortest to longest.
+// For example, if this array were passed as an argument:
+// ["Telescopes", "Glasses", "Eyes", "Monocles"]
+// Your function would return the following array:
+// ["Eyes", "Glasses", "Monocles", "Telescopes"]
+
+// Solution 
+// const sortByLength = (array) => {
+//   return array.sort((a, b) => a.length - b.length);
+// };
+// console.log(sortByLength(["Telescopes", "Glasses", "Eyes", "Monocles"]));
