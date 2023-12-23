@@ -2298,3 +2298,27 @@
 // console.log(
 //   convertHashToArray({ name: "Jeremy", age: 24, role: "Software Engineer" })
 // );
+
+// Question #111: The Hamming weight of a string is the number of symbols that are different from the zero-symbol of the alphabet used. There are several algorithms for efficient computing of the Hamming weight for numbers. In this Kata, speaking technically, you have to find out the number of '1' bits in a binary representation of a number. Thus,
+
+// hammingWeight(10) // 1010  => 2
+// hammingWeight(21) // 10101 => 3
+// The interesting part of this task is that you have to do it without string operation (hey, it's not really interesting otherwise)
+
+//Solution
+// const hammingWeight = (x) => {
+//   let binary = [];
+//   if (x === 1) {
+//     return 1;
+//   }
+//   while (x > 1) {
+//     binary.push(x % 2);
+//     x = Math.floor(x / 2);
+//     if (x === 1) {
+//       binary.push(x);
+//       binary.reverse();
+//     }
+//   }
+//   return binary.filter((ele) => ele === 1).length;
+// };
+// console.log(hammingWeight(1));
