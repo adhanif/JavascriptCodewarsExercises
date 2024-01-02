@@ -2328,7 +2328,6 @@
 // [[1],[2]] => true
 // ['1','2'] => false
 // [{1:1},{2:2}] => false
-
 //Solution
 // const arrCheck = (value) => {
 //   return value.every((ele) => {
@@ -2336,3 +2335,31 @@
 //   })
 // }
 // console.log(arrCheck(['1', '2']))
+
+// Question #113: You are given an array of arrays. Inside of the interior arrays are numbers. Join the arrays together by descending total array value ending up with one final array.
+// Simple example:
+// cantBeatSoJoin([[1,2], [3,4], [5,6], [7,8], [9]]) -> [7, 8, 5, 6, 9, 3, 4, 1, 2]
+
+//solution
+// function cantBeatSoJoin(numbers) {
+//   return numbers
+//     .sort(
+//       (a, b) =>
+//         b.reduce((tot, cur) => {
+//           return tot + cur
+//         }, 0) -
+//         a.reduce((tot, cur) => {
+//           return tot + cur
+//         }, 0),
+//     )
+//     .flat()
+// }
+// console.log(
+//   cantBeatSoJoin([
+//     [45, 64],
+//     [43, 17],
+//     [13, 37],
+//     [1, 9],
+//     [2, 3],
+//   ]),
+// )
