@@ -2391,3 +2391,25 @@
 //   }, 0)
 // }
 // console.log(add(100, 200, 300))
+
+// Question #116: You will get an array of numbers. Every preceding number is smaller than the one following it. Some numbers will be missing, for instance:
+
+// [-3,-2,1,5] missing numbers are: -1,0,2,3,4
+// Your task is to return an array of those missing numbers:
+// [-1,0,2,3,4]
+
+//solution:
+// function findMissingNumbers(arr) {
+//   const range = Array.from(
+//     { length: Math.max(...arr) - Math.min(...arr) + 1 },
+//     (_, i) => Math.min(...arr) + i,
+//   )
+
+//   return range.filter((ele) => {
+//     if (!arr.includes(ele)) {
+//       console.log(ele)
+//       return ele !== undefined
+//     }
+//   })
+// }
+// console.log(findMissingNumbers([-3, -2, 1, 5]))
