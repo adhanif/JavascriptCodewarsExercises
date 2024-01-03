@@ -2364,7 +2364,7 @@
 //   ]),
 // )
 
-// Question #114:Each floating-point number should be formatted that only the first two decimal places are returned. You don't need to check whether the input is a valid number because only valid numbers are used in the tests. Don't round the numbers! Just cut them after two decimal places!
+// Question #114: Each floating-point number should be formatted that only the first two decimal places are returned. You don't need to check whether the input is a valid number because only valid numbers are used in the tests. Don't round the numbers! Just cut them after two decimal places!
 // Right examples:
 // 32.8493 is 32.84
 // 14.3286 is 14.32
@@ -2378,3 +2378,16 @@
 //   )
 // }
 // console.log(twoDecimalPlaces(10.1289767789))
+
+// Question #115: You will create a function named add. This function will return the sum of all the arguments. Sounds easy, doesn't it?? Well here's the twist. The inputs will gradually increase with their index as parameter to the function.
+
+// add(3,4,5);
+// returns ( 3 * 1 ) + ( 4 * 2 ) + ( 5 * 3 ) = 26*/
+
+// solution:
+// function add(...number) {
+//   return number.reduce((tot, cur, i) => {
+//     return tot + cur * (i + 1)
+//   }, 0)
+// }
+// console.log(add(100, 200, 300))
