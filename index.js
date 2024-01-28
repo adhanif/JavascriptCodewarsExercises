@@ -2431,3 +2431,48 @@
 //   return out
 // }
 // console.log(generateShape(8))
+
+// Question #118: Your task is to return the sum of Triangular Numbers up-to-and-including the nth Triangular Number. Triangular Number: "any of the series of numbers (1, 3, 6, 10, 15, etc.) obtained by continued summation of the natural numbers 1, 2, 3, 4, 5, etc."
+
+// [01]
+// 02 [03]
+// 04 05 [06]
+// 07 08 09 [10]
+// 11 12 13 14 [15]
+// 16 17 18 19 20 [21]
+// e.g. If 4 is given: 1 + 3 + 6 + 10 = 20.
+
+// Triangular Numbers cannot be negative so return 0 if a negative number is given.
+
+// Solution:
+// const sumTriangularNumbers = (n) => {
+//   for (let i = 1; i <= n; i++) {
+//     for (let j = 0; j < n; j++) {
+//       console.log(i+j)
+//     }
+//   }
+//   console.log(Array.from({ length: n }, (_, i) => i + 1))
+//   const range = Array.from({ length: n }, (_, i) => i + 1).reduce(
+//     (tot, cur, j) => {
+//       //   if (cur % 2) {
+//       console.log(j)
+//       return tot + cur
+//       //   }
+//     },
+//   )
+//   console.log(range)
+// }
+// console.log(sumTriangularNumbers(8))
+
+// Question #119: In this Kata, you will be given an integer array and your task is to return the sum of elements occupying prime-numbered indices. The first element of the array is at index 0.
+
+//solution
+// function total(arr) {
+//   return arr.reduce((acc, curr, i) => {
+//     if (i <= 1) return acc;
+//     for (let j = 2; j < i; j++) if (i % j === 0) return acc;
+//     return acc + curr;
+//   }, 0);
+// }
+
+// console.log(total([1, 2, 3, 4, 5, 6]));
