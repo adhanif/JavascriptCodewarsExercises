@@ -2510,3 +2510,32 @@
 // }
 
 // console.log(addBinary(13, 1));
+
+// Question #121:
+
+// var removeDuplicates = function (nums) {
+//   let set = new Set(nums);
+
+//   let a = [1, 2];
+//   let b = [1, 2];
+//   let array = Array.from(set);
+//   let map = new Map();
+//   for (let i = 0; i < nums.length - set.size; i++) {
+//     array.push(String.fromCharCode(95));
+//   }
+//   console.log(array);
+// };
+// console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
+
+// Question #121: Complete function saleHotdogs/SaleHotDogs/sale_hotdogs, function accepts 1 parameter:n, n is the number of hotdogs a customer will buy, different numbers have different prices (refer to the following table), return how much money will the customer spend to buy that number of hotdogs.
+// number of hotdogs	price per unit (cents)
+// n < 5	100
+// n >= 5 and n < 10	95
+// n >= 10	90
+
+// solution:
+
+// function saleHotdogs(n) {
+//   return n < 5 ? 100 * n : n >= 5 && n < 10 ? 95 * n : n >= 10 ? 90 * n : '0';
+// }
+// console.log(saleHotdogs(10));
