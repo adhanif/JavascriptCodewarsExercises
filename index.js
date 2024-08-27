@@ -2539,3 +2539,20 @@
 //   return n < 5 ? 100 * n : n >= 5 && n < 10 ? 95 * n : n >= 10 ? 90 * n : '0';
 // }
 // console.log(saleHotdogs(10));
+
+// Question #122:  Write a function called checkCoupon which verifies that a coupon code is valid and not expired.
+// A coupon is no more valid on the day AFTER the expiration date. All dates will be passed as strings in this format: "MONTH DATE, YEAR".
+
+// Examples:
+// checkCoupon("123", "123", "July 9, 2015", "July 9, 2015")  ===  true
+// checkCoupon("123", "123", "July 9, 2015", "July 2, 2015")  ===  false
+
+// solution:
+// const checkCoupon = (enteredCode, correctCode, currentDate, expirationDate) => {
+//   return enteredCode === correctCode &&
+//     Date.parse(currentDate) <= Date.parse(expirationDate)
+//     ? true
+//     : false;
+// };
+
+// console.log(checkCoupon('123', '123', 'September 5, 2014', 'October 1, 2014'));
