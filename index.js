@@ -2556,3 +2556,21 @@
 // };
 
 // console.log(checkCoupon('123', '123', 'September 5, 2014', 'October 1, 2014'));
+
+// Question #123: Write a function that takes a single non-empty string of only lowercase and uppercase ascii letters (word) as its argument, and returns an ordered list containing the indices of all capital (uppercase) letters in the string.
+
+// Example (Input --> Output)
+// "CodEWaRs" --> [0,3,4,6]
+
+// solution
+// const capitals = function (word) {
+//   let orderedList = [];
+//   word.split('').forEach((a, i) => {
+//     if (a.charCodeAt(0) >= 65 && a.charCodeAt(0) <= 90) {
+//       orderedList.push(i);
+//     }
+//   });
+//   return orderedList;
+// };
+
+// console.log(capitals('CodEWaRs'));
