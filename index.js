@@ -2574,3 +2574,34 @@
 // };
 
 // console.log(capitals('CodEWaRs'));
+
+// Question #124: The goal of this exercise is to convert a string to a new string where each character in the new string is "(" if that character appears only once in the original string, or ")" if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.
+
+// Examples
+// "din"      =>  "((("
+// "recede"   =>  "()()()"
+// "Success"  =>  ")())())"
+// "(( @"     =>  "))(("
+
+//colution
+
+function duplicateEncode(word) {
+  let alpha = {};
+  let newString = '';
+  word = word.toLowerCase();
+  for (let char of word) {
+    alpha[char] = (alpha[char] || 0) + 1;
+  }
+
+  word.split('').forEach((ele) => {
+    if (alpha[ele] === 1) {
+      newString = newString.concat('(');
+    } else {
+      newString = newString.concat(')');
+    }
+  });
+
+  return newString;
+}
+
+console.log(duplicateEncode('rEcede'));
