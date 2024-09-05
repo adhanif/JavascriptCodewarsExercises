@@ -2606,7 +2606,7 @@
 
 // console.log(duplicateEncode('rEcede'));
 
-// Question #125:Take 2 strings s1 and s2 including only letters from a to z. Return a new sorted string (alphabetical ascending), the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
+// Question #125: Take 2 strings s1 and s2 including only letters from a to z. Return a new sorted string (alphabetical ascending), the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
 
 // Examples:
 // a = "xyaabbbccccdefww"
@@ -2623,3 +2623,39 @@
 // }
 
 // console.log(longest('loopingisfunbutdangerous', 'lessdangerousthancoding'));
+
+// Question #126: Build a pyramid-shaped tower, as an array/list of strings, given a positive integer number of floors. A tower block is represented with "*" character.
+
+// For example, a tower with 3 floors looks like this:
+
+// [
+//   "  *  ",
+//   " *** ",
+//   "*****"
+// ]
+// And a tower with 6 floors looks like this:
+
+// [
+//   "     *     ",
+//   "    ***    ",
+//   "   *****   ",
+//   "  *******  ",
+//   " ********* ",
+//   "***********"
+// ]
+
+// solution
+// function towerBuilder(nFloors) {
+//   let array = [];
+//   const totalWidth = 2 * nFloors - 1;
+//   for (let i = 0; i < nFloors; i++) {
+//     let str = '*'.repeat(2 * i + 1);
+//     let paddedStr = str
+//       .padStart((totalWidth - str.length) / 2 + str.length)
+//       .padEnd(totalWidth);
+//     array.push(paddedStr);
+//   }
+//   return array;
+// }
+
+// console.log(towerBuilder(5));
