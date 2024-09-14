@@ -2698,19 +2698,60 @@
 // ]
 
 // solution
-function matrix(array) {
-  array.map((arr, i) => {
-    arr[i] < 0 ? (arr[i] = 0) : arr[i] >= 0 ? (arr[i] = 1) : arr[i];
-  });
-  return array;
-}
+// function matrix(array) {
+//   array.map((arr, i) => {
+//     arr[i] < 0 ? (arr[i] = 0) : arr[i] >= 0 ? (arr[i] = 1) : arr[i];
+//   });
+//   return array;
+// }
 
-console.log(
-  matrix([
-    [-1, 4, -5, -9, 3],
-    [6, -4, -7, 4, -5],
-    [3, 5, 0, -9, -1],
-    [1, 5, -7, -8, -9],
-    [-3, 2, 1, -5, 6],
-  ]),
-);
+// console.log(
+//   matrix([
+//     [-1, 4, -5, -9, 3],
+//     [6, -4, -7, 4, -5],
+//     [3, 5, 0, -9, -1],
+//     [1, 5, -7, -8, -9],
+//     [-3, 2, 1, -5, 6],
+//   ]),
+// );
+
+// Question #129: For example:
+// matrix:
+// [1, 2, 3]
+// [4, 5, 6]
+// [7, 8, 9]
+
+// principal diagonal: [1, 5, 9]
+// secondary diagonal: [3, 5, 7]
+// Task
+// Your task is to find which diagonal is "larger": which diagonal has a bigger sum of their elements.
+
+// If the principal diagonal is larger, return "Principal Diagonal win!"
+// If the secondary diagonal is larger, return "Secondary Diagonal win!"
+// If they are equal, return "Draw!"
+// Note: You will always receive matrices of the same dimension.
+
+// solution:
+
+// function diagonal(matrix) {
+//   let principalDiagonal = matrix.reduce((acc, curr, i) => {
+//     return curr[i] + acc;
+//   }, 0);
+
+//   let secondaryDiagonal = matrix.reduce((acc, curr, i) => {
+//     return curr[matrix.length - 1 - i] + acc;
+//   }, 0);
+
+//   return principalDiagonal > secondaryDiagonal
+//     ? 'Principal Diagonal win!'
+//     : principalDiagonal < secondaryDiagonal
+//     ? 'Secondary Diagonal win!'
+//     : 'Draw!';
+// }
+// console.log(
+//   diagonal([
+//     [2, 2, 2],
+//     [4, 2, 6],
+//     [1, 8, 2],
+//   ]),
+// );
