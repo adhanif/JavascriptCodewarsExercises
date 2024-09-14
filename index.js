@@ -2675,3 +2675,42 @@
 //   return parseInt(myArray.sort().join(''));
 // }
 // console.log(minValue([1, 9, 3, 1, 7, 4, 6, 6, 7]));
+
+// Question #128: Function receive a two-dimensional square array of random integers. On the main diagonal, all the negative integers must be changed to 0, while the others must be changed to 1 (Note: 0 is considered non-negative, here).
+// (You can mutate the input if you want, but it is a better practice to not mutate the input)
+
+// Example:
+// Input array
+// [
+//   [-1,  4, -5, -9,  3 ],
+//   [ 6, -4, -7,  4, -5 ],
+//   [ 3,  5,  0, -9, -1 ],
+//   [ 1,  5, -7, -8, -9 ],
+//   [-3,  2,  1, -5,  6 ]
+// ]
+// Output array
+// [
+//   [ 0,  4, -5, -9,  3 ],
+//   [ 6,  0, -7,  4, -5 ],
+//   [ 3,  5,  1, -9, -1 ],
+//   [ 1,  5, -7,  0, -9 ],
+//   [-3,  2,  1, -5,  1 ]
+// ]
+
+// solution
+function matrix(array) {
+  array.map((arr, i) => {
+    arr[i] < 0 ? (arr[i] = 0) : arr[i] >= 0 ? (arr[i] = 1) : arr[i];
+  });
+  return array;
+}
+
+console.log(
+  matrix([
+    [-1, 4, -5, -9, 3],
+    [6, -4, -7, 4, -5],
+    [3, 5, 0, -9, -1],
+    [1, 5, -7, -8, -9],
+    [-3, 2, 1, -5, 6],
+  ]),
+);
