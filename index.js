@@ -2849,7 +2849,7 @@
 
 //     if (chunk.length >= sz) {
 //       // prettier-ignore
-//       if ( chunk.reduce((acc, curr) => Number(curr) + acc, 0) % 2 === 0) 
+//       if ( chunk.reduce((acc, curr) => Number(curr) + acc, 0) % 2 === 0)
 //     {
 //       chunks.push(chunk.reverse().join(''));
 //     }else {
@@ -2862,3 +2862,25 @@
 // }
 
 // revrot('563000655734469485', 4);
+
+// Question #135:   The number is the first integer with more than one digit that fulfills the property partially introduced in the title of this kata. What's the use of saying "Eureka"? Because this sum gives the same number:
+
+// 1, 10  --> [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// 1, 100 --> [1, 2, 3, 4, 5, 6, 7, 8, 9, 89]
+// If there are no numbers of this kind in the range [a,b] the function should output an empty list.
+// 90, 100 --> []
+
+// function sumDigPow(a, b) {
+//   let eureka = [];
+//   for (let i = a; i <= b; i++) {
+//     let aa = i
+//       .toString()
+//       .split('')
+//       .reduce((acc, curr, i) => Math.pow(Number(curr), i + 1) + acc, 0);
+//     if (aa === i) {
+//       eureka.push(i);
+//     }
+//   }
+//   return eureka;
+// }
+// sumDigPow(10, 150);
