@@ -2863,13 +2863,14 @@
 
 // revrot('563000655734469485', 4);
 
-// Question #135:   The number is the first integer with more than one digit that fulfills the property partially introduced in the title of this kata. What's the use of saying "Eureka"? Because this sum gives the same number:
+// Question #135: The number is the first integer with more than one digit that fulfills the property partially introduced in the title of this kata. What's the use of saying "Eureka"? Because this sum gives the same number:
 
 // 1, 10  --> [1, 2, 3, 4, 5, 6, 7, 8, 9]
 // 1, 100 --> [1, 2, 3, 4, 5, 6, 7, 8, 9, 89]
 // If there are no numbers of this kind in the range [a,b] the function should output an empty list.
 // 90, 100 --> []
 
+// solution
 // function sumDigPow(a, b) {
 //   let eureka = [];
 //   for (let i = a; i <= b; i++) {
@@ -2884,3 +2885,30 @@
 //   return eureka;
 // }
 // sumDigPow(10, 150);
+
+// Question #136: You want to create secret messages which can be deciphered by the Decipher this! kata. Here are the conditions: Your message is a string containing space separated words.
+// You need to encrypt each word in the message using the following rules:
+// The first letter must be converted to its ASCII code.
+// The second letter must be switched with the last letter
+// Keepin' it simple: There are no special characters in the input.
+// Examples:
+// encryptThis("Hello") === "72olle"
+// encryptThis("good") === "103doo"
+// encryptThis("hello world") === "104olle 119drlo"
+
+// solution
+// const encryptThis = function (text) {
+//   return text
+//     .split(' ')
+//     .map((word) => {
+//       const firstLetter = word.charCodeAt(0);
+//       const chunk = word.slice(1).split('');
+//       if (chunk.length > 1) {
+//         [chunk[0], chunk[chunk.length - 1]] = [chunk[chunk.length - 1], chunk[0]];
+//       }
+//       return firstLetter + chunk.join('');
+//     })
+//     .join(' ');
+// };
+
+// encryptThis('');
