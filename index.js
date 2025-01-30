@@ -2944,3 +2944,26 @@
 //   }
 // }
 // findMissingLetter(['a', 'b', 'c', 'd', 'f']);
+
+
+
+// Question #139: Given two arrays of strings a1 and a2 return a sorted array r in lexicographical order of the strings of a1 which are substrings of strings of a2.
+
+// Example 1:
+// a1 = ["arp", "live", "strong"]
+// a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
+// returns ["arp", "live", "strong"]
+
+// Example 2:
+// a1 = ["tarp", "mice", "bull"]
+// a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
+// returns []
+
+//solution
+// const inArray = (a1, a2) => {
+//  return a1.filter((ele) => a2.some((ele2) => ele2.includes(ele))).sort();
+// };
+
+// a1 = ['live', 'strong', 'arp'];
+// a2 = ['lively', 'alive', 'harp', 'sharp', 'armstrong'];
+// inArray(a1, a2);
