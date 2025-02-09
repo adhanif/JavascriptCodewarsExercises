@@ -2821,8 +2821,6 @@
 
 // If the sum of a chunk's digits is divisible by 2, reverse that chunk; otherwise rotate it to the left by one position. Put together these modified chunks and return the result as a string.
 
-// If
-
 // sz is <= 0 or if str == "" return ""
 // sz is greater (>) than the length of str it is impossible to take a chunk of size sz hence return "".
 // Examples:
@@ -2945,8 +2943,6 @@
 // }
 // findMissingLetter(['a', 'b', 'c', 'd', 'f']);
 
-
-
 // Question #139: Given two arrays of strings a1 and a2 return a sorted array r in lexicographical order of the strings of a1 which are substrings of strings of a2.
 
 // Example 1:
@@ -2967,3 +2963,17 @@
 // a1 = ['live', 'strong', 'arp'];
 // a2 = ['lively', 'alive', 'harp', 'sharp', 'armstrong'];
 // inArray(a1, a2);
+
+// Question #140: Write a function that takes an integer as input, and returns the number of bits that are equal to one in the binary representation of that number. You can guarantee that input is non-negative.
+// Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this
+
+// solution
+// const countBits = (b) => {
+//   const bits = [];
+//   while (b > 0) {
+//     bits.unshift(b % 2);
+//     b = Math.floor(b / 2);
+//   }
+//   return bits.filter((bit) => bit === 1).length;
+// };
+// countBits(1234);
