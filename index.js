@@ -3066,13 +3066,18 @@
 
 // function isPrime(num) {
 //   if (num <= 1) return false;
+//   if (num === 2) return true;
 
-//   for (let i = 2; i < num; i++) {
+//   // No even number other than 2 is prime
+//   if (num % 2 === 0) return false;
+
+//   const sqrt = Math.sqrt(num);
+//   for (let i = 3; i <= sqrt; i += 2) {
 //     if (num % i === 0) {
 //       return false;
 //     }
 //   }
+
 //   return true;
 // }
-// isPrime(13)
 
