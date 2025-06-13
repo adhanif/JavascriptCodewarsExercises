@@ -3081,3 +3081,27 @@
 //   return true;
 // }
 
+// Question #146: Most Frequent Character  Identify the character that appears most frequently in a string.
+// If there are multiple characters that appear the same number of times, return the one that appears first in the string.
+
+const mostFrequestChar = (str) => {
+  let counts = {};
+  str.split('').forEach((char) => {
+    counts[char] = (counts[char] || 0) + 1;
+  });
+
+  let maxKey = null;
+  let maxValue = null;
+
+  Object.entries(counts).forEach(([key, value]) => {
+    if (value > maxValue) {
+      maxValue = value;
+      maxKey = key;
+    }
+  });
+
+  console.log(maxKey, maxValue);
+  return maxKey;
+};
+
+console.log(mostFrequestChar('abbccd'));
