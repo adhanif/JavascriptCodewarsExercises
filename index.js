@@ -3084,24 +3084,70 @@
 // Question #146: Most Frequent Character  Identify the character that appears most frequently in a string.
 // If there are multiple characters that appear the same number of times, return the one that appears first in the string.
 
-const mostFrequestChar = (str) => {
-  let counts = {};
-  str.split('').forEach((char) => {
-    counts[char] = (counts[char] || 0) + 1;
-  });
+// const mostFrequestChar = (str) => {
+//   let counts = {};
+//   str.split('').forEach((char) => {
+//     counts[char] = (counts[char] || 0) + 1;
+//   });
 
-  let maxKey = null;
-  let maxValue = null;
+//   let maxKey = null;
+//   let maxValue = null;
 
-  Object.entries(counts).forEach(([key, value]) => {
-    if (value > maxValue) {
-      maxValue = value;
-      maxKey = key;
-    }
-  });
+//   Object.entries(counts).forEach(([key, value]) => {
+//     if (value > maxValue) {
+//       maxValue = value;
+//       maxKey = key;
+//     }
+//   });
+//   return maxKey;
+// };
 
-  console.log(maxKey, maxValue);
-  return maxKey;
-};
+// console.log(mostFrequestChar('abbccd'));
 
-console.log(mostFrequestChar('abbccd'));
+// Question #147:  The marketing team is spending way too much time typing in hashtags.
+// Let's help them with our own Hashtag Generator!
+
+// Here's the deal:
+
+// It must start with a hashtag (#).
+// All words must have their first letter capitalized.
+// If the final result is longer than 140 chars it must return false.
+// If the input or the result is an empty string it must return false.
+// Examples
+// " Hello there thanks for trying my Kata"  =>  "#HelloThereThanksForTryingMyKata"
+// "    Hello     World   "                  =>  "#HelloWorld"
+// ""                                        =>  false
+
+// solution1
+// function generateHashtag(str) {
+//   if (str.trim().length === 0) {
+//     return false;
+//   }
+
+//   str = str.toLowerCase().trim().replace(/ {2,}/g, ' ');
+//   let newString = (/ {2,}/.test(str) ? str.split(/ {2,}/) : str.split(' '))
+//     .filter((a) => a !== '')
+//     .map((a) =>
+//       a
+//         .split('')
+//         .map((b, i) => (i === 0 ? b[i].toUpperCase() : b))
+//         .join('')
+//     );
+//   newString.unshift('#');
+//   return newString.join('').length > 140 ? false : newString.join('');
+// }
+
+// solution  2
+// function generateHashtag(str) {
+//   if (str.trim().length === 0) {
+//     return false;
+//   }
+
+//   let finalString = str.split(' ').reduce((total, cur) => {
+//     return total + cur.charAt(0).toUpperCase() + cur.substring(1);
+//   }, '#');
+
+//   return finalString.length > 140 ? false : finalString;
+// }
+
+// console.log(generateHashtag('oav sbrt r  qdb pwge ojler  equ'));
