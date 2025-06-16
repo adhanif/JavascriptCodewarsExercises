@@ -3151,3 +3151,20 @@
 // }
 
 // console.log(generateHashtag('oav sbrt r  qdb pwge ojler  equ'));
+
+// Question #148: Write a function in JavaScript that takes a string as input and returns
+// a new string with only the first occurrence of each letter, preserving the
+// original order and ignoring case (but keeping the original case in output).
+
+// const removeDuplicates = (str) => {
+//   const seen = new Set();
+//   let result = '';
+//   str.split('').forEach((a) => {
+//     if (!seen.has(a)) {
+//       seen.add(a);
+//     }
+//     result += a;
+//   });
+//   return result;
+// };
+// console.log(removeDuplicates('AaBbCc'));
