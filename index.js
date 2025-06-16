@@ -3168,3 +3168,25 @@
 //   return result;
 // };
 // console.log(removeDuplicates('AaBbCc'));
+
+//Question #149:  Find the Most Frequent Character. Return the character that appears most frequently in the string.
+
+// const mostFrequestFinder = (str) => {
+//   const result = str.split('').reduce((final, char) => {
+//     !final[char] ? (final[char] = 1) : final[char]++;
+//     return final;
+//   }, {});
+
+//   let maxChar = '';
+//   let maxNumber = 0;
+
+//   for (const [key, value] of Object.entries(result)) {
+//     if (value > maxNumber) {
+//       maxNumber = value;
+//       maxChar = key;
+//     }
+//   }
+//   return maxChar;
+// };
+
+// console.log(mostFrequestFinder('javassscript'));
