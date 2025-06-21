@@ -3245,3 +3245,35 @@
 // }
 
 // console.log(isPangram('This is not a pangram.'));
+
+// Question #152: Write a method (or function, depending on the language) that converts a string to camelCase, that is,
+// all words must have their first letter capitalized and spaces must be removed.
+
+// Examples (input --> output):
+// "hello case" --> "HelloCase"
+// "camel case word" --> "CamelCaseWord"
+
+//solution1
+// String.prototype.camelCase = function () {
+// return this.split(' ')
+//   .map((w) => {
+//     return w
+//       .split('')
+//       .map((x, i) => {
+//         return i === 0 ? x.toUpperCase() : x;
+//       })
+//       .join('');
+//   })
+//   .join('');
+// };
+
+// solution 2
+// String.prototype.camelCase = function () {
+//   return this.split(' ')
+//     .map((w) => {
+//       return w.charAt(0).toUpperCase() + w.slice(1);
+//     })
+//     .join('');
+// };
+
+// console.log('camel Case method'.camelCase());
